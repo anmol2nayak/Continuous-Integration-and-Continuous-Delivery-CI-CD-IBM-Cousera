@@ -1,74 +1,69 @@
-🚀 Continuous Integration and Continuous Delivery (CI/CD) Pipeline Project
-📘 Overview
+🚀 Continuous Integration and Continuous Delivery (CI/CD)
 
-This project demonstrates the complete setup and execution of a Continuous Integration and Continuous Delivery (CI/CD) pipeline using modern DevOps tools. It automates the build, test, and deployment process, ensuring rapid and reliable software delivery.
+This project demonstrates the end-to-end implementation of a CI/CD pipeline using modern DevOps practices.
+It automates the process of building, testing, and deploying applications through tools like Tekton, Argo CD, and OpenShift Pipelines.
 
-The system is designed to follow best practices of CI/CD and can be adapted for any microservice or web-based application.
+🧩 Overview
 
-🧩 Key Components
+The project showcases how software can be built, tested, and delivered automatically with minimal manual intervention.
+It highlights Continuous Integration (CI) to ensure reliable builds and Continuous Delivery (CD) for rapid, secure deployments.
 
-GitHub Actions / Tekton Pipelines — to automate build and deploy workflows.
+⚙️ Tech Stack
 
-Docker — for containerizing the application to ensure consistent environments.
+Tekton Pipelines – For defining and automating build/test steps
 
-Heroku / Cloud Deployment — to deploy the final image seamlessly.
+Argo CD – For GitOps-based continuous delivery
 
-Unit Tests — for ensuring code reliability and preventing regression issues.
+OpenShift Pipelines – Kubernetes-native CI/CD automation
 
-⚙️ Project Structure
-├── .github/          # CI/CD pipeline configurations (GitHub Actions)
-├── .tekton/          # Tekton pipeline definitions
-├── service/          # Core application source code
-├── tests/            # Automated test scripts
-├── Dockerfile        # Build container image
-├── requirements.txt  # Python dependencies
-├── setup.py          # Package setup
-└── Procfile          # Deployment process definition
+GitHub – Version control and collaboration
 
-🛠️ How to Run Locally
-# 1. Clone your repo
-git clone https://github.com/anmol2nayak/Continuous-Integration-and-Continuous-Delivery-CI-CD-IBM-Cousera.git
+YAML – Declarative configuration for pipelines and tasks
 
-# 2. Navigate inside
-cd Continuous-Integration-and-Continuous-Delivery-CI-CD-IBM-Cousera
+🧠 Key Features
 
-# 3. Install dependencies
-pip install -r requirements.txt
+Automated build, test, and deployment stages
 
-# 4. Run tests
-pytest
+Reusable Tekton tasks for code management and deployment
 
-# 5. Build Docker image
-docker build -t ci-cd-app .
+GitOps workflow using Argo CD for declarative deployments
 
-# 6. Run container
-docker run -p 8080:8080 ci-cd-app
+Secure, version-controlled pipeline configurations
 
-🌐 Deployment
+Integration with OpenShift for containerized deployments
 
-The CI/CD pipeline automatically triggers upon every push to the main branch.
-It performs the following sequence:
+🏗️ Workflow
 
-Build and test the application.
+Code Commit: Developer pushes code to GitHub.
 
-Package it into a Docker image.
+Build Trigger: Tekton Pipeline automatically builds and tests the application.
 
-Deploy it to the configured cloud environment.
+Image Build: Container image is generated and stored in the registry.
 
-💡 Learning Outcomes
+Deployment: Argo CD deploys the latest version to the OpenShift cluster.
 
-Understand the CI/CD workflow from code commit to deployment.
+📦 Directory Structure
+.
+├── pipelines/
+│   ├── tasks/
+│   ├── pipeline.yaml
+│   └── pipeline-run.yaml
+├── manifests/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── kustomization.yaml
+├── README.md
+└── .gitignore
 
-Automate application lifecycle using Tekton / GitHub Actions.
+📈 Learning Outcomes
 
-Learn Dockerization and continuous testing in real-world pipelines.
+Understanding of DevOps automation with Tekton and Argo CD
 
-👨‍💻 Author
+Hands-on exposure to GitOps principles
+
+Enhanced workflow efficiency with automated deployments
+
+💡 Author
 
 Anmol Nayak
-
-B.Tech Student | DevOps & Cloud Enthusiast
-
-🏷️ License
-
-This project is created for academic purposes under open educational use.
+Student | DevOps Enthusiast | Creative Technologist
