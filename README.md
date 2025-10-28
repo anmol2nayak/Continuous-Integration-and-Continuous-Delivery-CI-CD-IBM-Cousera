@@ -1,38 +1,74 @@
-# CI/CD Tools and Practices Final Project Template
+🚀 Continuous Integration and Continuous Delivery (CI/CD) Pipeline Project
+📘 Overview
 
-This repository contains the template to be used for the Final Project for the Coursera course **CI/CD Tools and Practices**.
+This project demonstrates the complete setup and execution of a Continuous Integration and Continuous Delivery (CI/CD) pipeline using modern DevOps tools. It automates the build, test, and deployment process, ensuring rapid and reliable software delivery.
 
-## Usage
+The system is designed to follow best practices of CI/CD and can be adapted for any microservice or web-based application.
 
-This repository is to be used as a template to create your own repository in your own GitHub account. No need to Fork it as it has been set up as a Template. This will avoid confusion when making Pull Requests in the future.
+🧩 Key Components
 
-From the GitHub **Code** page, press the green **Use this template** button to create your own repository from this template.
+GitHub Actions / Tekton Pipelines — to automate build and deploy workflows.
 
-Name your repo: `ci-cd-final-project`.
+Docker — for containerizing the application to ensure consistent environments.
 
-## Setup
+Heroku / Cloud Deployment — to deploy the final image seamlessly.
 
-After entering the lab environment you will need to run the `setup.sh` script in the `./bin` folder to install the prerequisite software.
+Unit Tests — for ensuring code reliability and preventing regression issues.
 
-```bash
-bash bin/setup.sh
-```
+⚙️ Project Structure
+├── .github/          # CI/CD pipeline configurations (GitHub Actions)
+├── .tekton/          # Tekton pipeline definitions
+├── service/          # Core application source code
+├── tests/            # Automated test scripts
+├── Dockerfile        # Build container image
+├── requirements.txt  # Python dependencies
+├── setup.py          # Package setup
+└── Procfile          # Deployment process definition
 
-Then you must exit the shell and start a new one for the Python virtual environment to be activated.
+🛠️ How to Run Locally
+# 1. Clone your repo
+git clone https://github.com/anmol2nayak/Continuous-Integration-and-Continuous-Delivery-CI-CD-IBM-Cousera.git
 
-```bash
-exit
-```
+# 2. Navigate inside
+cd Continuous-Integration-and-Continuous-Delivery-CI-CD-IBM-Cousera
 
-## Tasks
+# 3. Install dependencies
+pip install -r requirements.txt
 
+# 4. Run tests
+pytest
 
-## License
+# 5. Build Docker image
+docker build -t ci-cd-app .
 
-Licensed under the Apache License. See [LICENSE](/LICENSE)
+# 6. Run container
+docker run -p 8080:8080 ci-cd-app
 
-## Author
+🌐 Deployment
 
-Skills Network
+The CI/CD pipeline automatically triggers upon every push to the main branch.
+It performs the following sequence:
 
-## <h3 align="center"> © IBM Corporation 2023. All rights reserved. <h3/>
+Build and test the application.
+
+Package it into a Docker image.
+
+Deploy it to the configured cloud environment.
+
+💡 Learning Outcomes
+
+Understand the CI/CD workflow from code commit to deployment.
+
+Automate application lifecycle using Tekton / GitHub Actions.
+
+Learn Dockerization and continuous testing in real-world pipelines.
+
+👨‍💻 Author
+
+Anmol Nayak
+
+B.Tech Student | DevOps & Cloud Enthusiast
+
+🏷️ License
+
+This project is created for academic purposes under open educational use.
